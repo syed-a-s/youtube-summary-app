@@ -1,9 +1,8 @@
 import './TextBox.css';
 
-
 const TextBox = ({ text }) => {
   return (
-    <div className='Summary'>
+    <div className='textbox'>
       <p>{text}</p>
     </div>
   );
