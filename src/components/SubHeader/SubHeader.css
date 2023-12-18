@@ -1,0 +1,13 @@
+.subheader {
+  border: 1px solid grey;
+}
+
+.title {
+  border-bottom: 1px solid grey;
+  border-radius: 5px;
+}
+
+.custom-component {
+  padding: 10px;
+  text-align: left;
+}

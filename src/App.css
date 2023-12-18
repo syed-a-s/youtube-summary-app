@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+.container {
+  max-width: 50%;
+  margin: auto;
+  min-width: 800px;
+}
+
+.pane-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding-top: 20px;
+}
+
+.left-pane, 
+.right-pane {
+  /* width: 25%; */
+  padding-bottom: 20px;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.left-pane {
+  padding-right: 10px;
+}
+
+.right-pane {
+  padding-left: 10px;
+}
+
+.subheader {
+  margin-bottom: 5px;
+}
