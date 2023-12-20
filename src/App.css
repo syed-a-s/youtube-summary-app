@@ -2,13 +2,19 @@
   text-align: center;
   height: 100vh;
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 20px;
 }
 
 .container {
-  max-width: 50%;
-  margin: auto;
+  max-width: 80%;
+  /* margin: auto 0 ; */
   min-width: 800px;
+  border: 1px solid grey;
+  padding: 20px;
 }
 
 .pane-wrapper {

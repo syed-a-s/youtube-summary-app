@@ -11,8 +11,8 @@ function App() {
 
   return (
     <div className='App'>
-      <TitleBar />
       <div className='container'>
+        <TitleBar />
         <SearchField />
         <div className='pane-wrapper'>
           <div className='left-pane'>
