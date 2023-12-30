@@ -1,5 +1,6 @@
 import './UrlInput.css';
 import React, { useState } from 'react';
+import useFetch from '../../hook/useFetch.js';
 
 const UrlInput = () => {
   const [url, setUrl] = useState('');
@@ -23,7 +24,7 @@ const UrlInput = () => {
           onChange={handleInputChange}
           placeholder='Enter youtube url here'
         />
-        <button type='submit'>
+        <button onClick={handleSubmit} type='submit'>
           Submit
         </button>
       </div>
