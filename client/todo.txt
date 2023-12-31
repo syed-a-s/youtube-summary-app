@@ -1,0 +1,10 @@
+# 1st goal
+- get youtube url from user
+  - from youtube url, retrieve video id 
+  - after video id acquired, send to flask backend
+  - stringify the json retrieved
+  - update transcript body to display the new string (the transcript)
+
+# 2nd goal
+- work on front end prettiness
+  - figure out how to let 'transcript summary' take the span of left pane
