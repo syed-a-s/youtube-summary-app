@@ -14,11 +14,13 @@ function App() {
 
   const transcript = (transcriptData.transcript || []).map(item => item.text ?? '').join(' ');
 
+  console.log(transcript);
+
   return (
     <div className='App'>
       <div className='container'>
         <TitleBar />
-        <UrlInput callback={setTranscriptData} />
+        <UrlInput transcriptDataCallback={setTranscriptData} />
         <div className='pane-wrapper'>
           <div className='left-pane'>
             <SubHeader title='Transcript Summary' customComponent={<SummaryComponent />}/>
