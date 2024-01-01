@@ -1,12 +1,19 @@
+import React, { useState } from 'react';
+
 import './TranscriptComponent.css';
 
-import React, { useState } from 'react';
-import parseYoutubeUrl from '../../../utils/parseYoutubeUrl.js'
-
-const TranscriptComponent = () => {
+const TranscriptComponent = ({transcript}) => {
   return (
     <div>
-      TranscriptComponent
+      {transcript ? (
+        <div>
+          {transcript}
+        </div>
+      ) : (
+        <div>
+          No transcript yet :)
+        </div>
+      )}
     </div>
   );
 }

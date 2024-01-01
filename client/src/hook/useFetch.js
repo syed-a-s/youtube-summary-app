@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 
-const useFetch = (endpoint) => {
-  const [data, setData] = useState([]);
+const useFetch = (videoId) => {
+  const [transcriptData, setTranscriptData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState();
 
@@ -14,11 +14,11 @@ const useFetch = (endpoint) => {
 
     try {
       setIsLoading(true);
-      const response = await fetch(endpoint, { // fetch(`http://127.0.0.1:5000/${endpoint}`, {
+      const response = await fetch(`/get-transcript/${videoId}`, {
         signal: abortControllerRef.current?.signal,
       }); // will enable us on next request to abort the request if needed 
-      const data = await response.json();
-      setData(data);
+      const transcriptData = await response.json();
+      setTranscriptData(transcriptData);
     } catch (error) {
       if (error.name === "AbortError") {
         console.log("Aborted");
@@ -32,9 +32,9 @@ const useFetch = (endpoint) => {
 
   useEffect(() => {
     fetchData(); 
-  }, [endpoint]);
+  }, [videoId]);
 
-  return {data, isLoading, error};
+  return {transcriptData, isLoading, error};
 }
 
 export default useFetch;
