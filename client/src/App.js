@@ -10,20 +10,17 @@ import TextBox from './components/TextBox/TextBox';
 import './App.css';
 
 function App() {
-  const [transcriptData, setTranscriptData] = useState([]);
-
-  const transcript = (transcriptData.transcript || []).map(item => item.text ?? '').join(' ');
-
-  console.log(transcript);
+  const [transcript, setTranscript] = useState("");
+  const [summary, setSummary] = useState("");
 
   return (
     <div className='App'>
       <div className='container'>
         <TitleBar />
-        <UrlInput transcriptDataCallback={setTranscriptData} />
+        <UrlInput setTranscriptCallback={setTranscript} setSummaryCallback={setSummary}/>
         <div className='pane-wrapper'>
           <div className='left-pane'>
-            <SubHeader title='Transcript Summary' customComponent={<TextBox/>} paneType='left' />
+            <SubHeader title='Transcript Summary' customComponent={<TextBox text={summary}/>} paneType='left' />
           </div>
           <div className='right-pane'>
             <SubHeader title='The Actual Transcript' customComponent={<TextBox text={transcript}/>} paneType='right' />
